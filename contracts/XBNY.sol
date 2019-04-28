@@ -4,7 +4,7 @@ pragma solidity ^0.5.6;
     string  public name = "BANCACY";
     string  public symbol = "XBNY";
     string  public standard = "XBNY Token";
-    
+    uint256 public decimals = 18 ;
     uint256 public totalSupply;
     
     event Transfer(
