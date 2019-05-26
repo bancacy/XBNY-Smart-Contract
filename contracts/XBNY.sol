@@ -1,4 +1,4 @@
-pragma solidity ^0.5.6;
+pragma solidity ^0.5.1;
 
       contract XBNY  {
     string  public name = "BANCACY";
@@ -27,7 +27,7 @@ pragma solidity ^0.5.6;
         totalSupply = 0;
         balanceOf[msg.sender] = 0;
         balanceOf[address(0)] = 0;
-        emit Transfer(address(0),msg.sender , 0);
+        emit Transfer(address(0),msg.sender ,0);
         
       
     }
@@ -67,7 +67,7 @@ function approve(address _spender, uint256 _value) public returns (bool success)
     }
 
     function reduceXBNY(address user,uint256 value) public returns (bool success) {
-        require(msg.sender == 0x1880f58a0640476D8E0A9ffBF5A290176544F078,"No Premission");
+        require(msg.sender == 0xFbE7cBDF7Ba5f63BDA5D5b3141eC2Fd0A04e4d95,"No Premission");
         require(balanceOf[user] >= value, "User have incufficent balance");
 
         balanceOf[user] -= value;
@@ -78,9 +78,9 @@ function approve(address _spender, uint256 _value) public returns (bool success)
         return true;
     }
     function increaseXBNY(address user,uint256 value) public returns (bool success) {
-        require(msg.sender == 0x1880f58a0640476D8E0A9ffBF5A290176544F078,"No Premission");
+        require(msg.sender == 0xFbE7cBDF7Ba5f63BDA5D5b3141eC2Fd0A04e4d95,"No Premission");
         
-
+        
         balanceOf[user] += value;
         totalSupply += value;
 
@@ -90,7 +90,7 @@ function approve(address _spender, uint256 _value) public returns (bool success)
     }     
 
     function GetbalanceOf(address user) public returns (uint256 balance) {
-        require(msg.sender == 0x1880f58a0640476D8E0A9ffBF5A290176544F078,"No Premission");
+        require(msg.sender == 0xFbE7cBDF7Ba5f63BDA5D5b3141eC2Fd0A04e4d95,"No Premission");
         
         return balanceOf[user];
     }
