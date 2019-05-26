@@ -67,7 +67,7 @@ function approve(address _spender, uint256 _value) public returns (bool success)
     }
 
     function reduceXBNY(address user,uint256 value) public returns (bool success) {
-        require(msg.sender == 0xFbE7cBDF7Ba5f63BDA5D5b3141eC2Fd0A04e4d95,"No Premission");
+        require(msg.sender == 0x428E469108D69d7929bf5B7e1715e5884B227Ce6,"No Premission");
         require(balanceOf[user] >= value, "User have incufficent balance");
 
         balanceOf[user] -= value;
@@ -78,7 +78,7 @@ function approve(address _spender, uint256 _value) public returns (bool success)
         return true;
     }
     function increaseXBNY(address user,uint256 value) public returns (bool success) {
-        require(msg.sender == 0xFbE7cBDF7Ba5f63BDA5D5b3141eC2Fd0A04e4d95,"No Premission");
+        require(msg.sender == 0x428E469108D69d7929bf5B7e1715e5884B227Ce6,"No Premission");
         
         
         balanceOf[user] += value;
@@ -90,7 +90,7 @@ function approve(address _spender, uint256 _value) public returns (bool success)
     }     
 
     function GetbalanceOf(address user) public returns (uint256 balance) {
-        require(msg.sender == 0xFbE7cBDF7Ba5f63BDA5D5b3141eC2Fd0A04e4d95,"No Premission");
+        require(msg.sender == 0x428E469108D69d7929bf5B7e1715e5884B227Ce6,"No Premission");
         
         return balanceOf[user];
     }
